@@ -21,7 +21,7 @@ public class InstallReferrerBroadcastReceiver extends BroadcastReceiver {
             Log.d(DEBUG_TAG, "Referrer : " + referrer);
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
             if (!prefs.getBoolean("postback_sent", false)) {
-                UnityPlayer.UnitySendMessage("Android Bridge", "OnInstallReceived", referrer);
+                UnityPlayer.UnitySendMessage("Android Listener", "OnInstallReceived", referrer);
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.putBoolean("postback_sent", true);
                 editor.commit();
