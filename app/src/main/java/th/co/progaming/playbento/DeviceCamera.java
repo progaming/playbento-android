@@ -9,7 +9,7 @@ import java.util.List;
  * Created by Chatpong on 11/3/2015 AD.
  */
 public class DeviceCamera {
-    public void enableAutofocus() {
+    public static void enableAutofocus() {
         Camera camera = Camera.open();
         Camera.Parameters parameters = camera.getParameters();
         List<String> focusModes = parameters.getSupportedFocusModes();
